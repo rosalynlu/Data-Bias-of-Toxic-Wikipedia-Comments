@@ -1,5 +1,15 @@
 # Data-Bias-of-Toxic-Internet-Comments
-The goal of this project (which is an assignment for my I 310D: Introduction to Human-Centered Data Science class) was to explore the concept of bias through querying an existing natural language processing model — specifically, the Perspective API released by Google Jigsaw. For this assignment, I examined a dataset of internet comments and their scores and scored the toxicity of each comment based on my own hypothesis (if a comment contains "toxic" keywords (or a high frequency of these keywords), then it is more likely to be flagged as toxic), then through the Perspective API, then comparing the two. 
+The goal of this project (which is an assignment for my I 310D: Introduction to Human-Centered Data Science class) was to explore the concept of bias through querying an existing natural language processing model — specifically, the Perspective API released by Google Jigsaw. For this assignment, I examined a dataset of internet comments and their scores and scored the toxicity of each comment based on my own hypothesis (if a comment contains "toxic" keywords (or a high frequency of these keywords), then it is more likely to be flagged as toxic), then through the Perspective API, then comparing the two.
+
+## Conclusions
+
+There is an obvious threshold line between if a comment is considered toxic or not (0.3561489) that was established using FPR, TPR, and threshold report. Anything above 0.3561489 is considered toxic while anything below is considered not toxic.
+
+There is a very soft correlation between a comment's toxicity score and the number of toxic keywords contained in it. As the toxicity score increases, the higher number of toxic keywords there are present in the comment. An argument could be made that for low toxicity scores, it is shown that there are lower number of toxic keywords present. However, one possible counter is that the tests run encompassed mostly comments with a low number of toxic keywords present; therefore, it is obvious that most of the data points would be grouped in the bottom left corner of the graph.
+
+I was surprised by the lack of correlation between a comment's toxicity score and the number of toxic keywords contained in it, as I believed my hypothesis to be correct, which could be traced back to bias based on my own assumptions of how flagging toxic comments worked.
+
+There were a total of 50 toxic comments and 50 non-toxic comments used to train the model, and 200 toxic and non-toxic comments used to test the model. Some values were reported as "NaN", which resulted in the final dataframe of comments and their attributes to total at 198 entries. The low number of comments used to train and test the model may have had an affect on the threshold value used as well as the visualizations of the trends (as I did not incorporate the entire file of comment data as I thought it was too large).
 
 ### MIT License
 
