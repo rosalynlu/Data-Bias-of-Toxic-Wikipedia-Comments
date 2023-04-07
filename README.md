@@ -1,1 +1,2 @@
-# Data-Bias-of-Toxic-Wikipedia-Comments
+# Data-Bias-of-Toxic-Internet-Comments
+The goal of this project (which is an assignment for my I 310D: Introduction to Human-Centered Data Science class) was to explore the concept of bias through querying an existing natural language processing model — specifically, the Perspective API released by Google Jigsaw. For this assignment, I examined a dataset of internet comments and their scores and scored the toxicity of each comment based on my own hypothesis (if a comment contains "toxic" keywords (or a high frequency of these keywords), then it is more likely to be flagged as toxic), then through the Perspective API, then comparing the two. 
